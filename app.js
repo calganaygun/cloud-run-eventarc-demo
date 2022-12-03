@@ -20,9 +20,7 @@ const fileUploadOptions = {
   useTempFiles: true,
 };
 
-app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/static/upload.html");
-});
+app.use("/", express.static("static"));
 
 app.post(
   "/uploadImage",
